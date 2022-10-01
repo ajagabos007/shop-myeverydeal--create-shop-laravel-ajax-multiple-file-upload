@@ -122,11 +122,11 @@
 		
 		$('#checked-toggle').change(function(event){
 			if(this.checked)
-				base_url = this.val;
+				base_url = $('#checked-toggle').val();
 			else
 				base_url = local_url;
 
-			toastr.success('Base url set to '+base_url);	
+			toastr.success('Base url: <small>'+base_url+'<small>');	
 
 		})
 		$('#name').keyup(function(event){
@@ -152,8 +152,8 @@
 		});
 		// Tastr seetings 
 		toastr.options.closeMethod = 'fadeOut';
-		toastr.options.closeDuration = 10000;
-		toastr.options.extendedTimeOut = 10000; // How long the toast will display after a user hovers over it
+		toastr.options.closeDuration = 5000;
+		toastr.options.extendedTimeOut = 5000; // How long the toast will display after a user hovers over it
 		toastr.options.closeEasing = 'swing';
 		toastr.options.closeButton = true;
 		toastr.options.progressBar = true;
